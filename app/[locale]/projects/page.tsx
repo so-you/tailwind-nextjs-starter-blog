@@ -1,19 +1,29 @@
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
+import { getDictionary } from '@/lib/i18n'
+import { Metadata } from 'next'
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await props.params
+  const dictionary = getDictionary(locale)
+  return genPageMetadata({ title: dictionary.projects.title })
+}
 
-export default function Projects() {
+export default async function Projects(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params
+  const dictionary = getDictionary(locale)
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            Projects
+            {dictionary.projects.title}
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your projects with a hero image (16 x 9)
+            {dictionary.projects.description}
           </p>
         </div>
         <div className="container py-12">

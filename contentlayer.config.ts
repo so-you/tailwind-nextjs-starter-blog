@@ -46,7 +46,9 @@ const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
   slug: {
     type: 'string',
-    resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
+    resolve: (doc) => {
+      return doc._raw.flattenedPath.replace(/^.+?(\/)/, '').replace(/\.zh$/, '')
+    },
   },
   path: {
     type: 'string',
@@ -57,6 +59,15 @@ const computedFields: ComputedFields = {
     resolve: (doc) => doc._raw.sourceFilePath,
   },
   toc: { type: 'json', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  language: {
+    type: 'string',
+    resolve: (doc) => {
+      if (doc._raw.sourceFileName.endsWith('.zh.mdx')) {
+        return 'zh'
+      }
+      return 'en'
+    },
+  },
 }
 
 /**

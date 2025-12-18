@@ -2,6 +2,7 @@
 
 import { Fragment, useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { useParams } from 'next/navigation'
 import {
   Menu,
   MenuButton,
@@ -11,6 +12,7 @@ import {
   RadioGroup,
   Transition,
 } from '@headlessui/react'
+import { getDictionary } from '@/lib/i18n'
 
 const Sun = () => (
   <svg
@@ -57,6 +59,9 @@ const Blank = () => <svg className="h-6 w-6" />
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
+  const params = useParams()
+  const locale = params?.locale as string
+  const dictionary = getDictionary(locale)
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
@@ -65,7 +70,7 @@ const ThemeSwitch = () => {
     <div className="flex items-center">
       <Menu as="div" className="relative inline-block text-left">
         <div className="hover:text-primary-500 dark:hover:text-primary-400 flex items-center justify-center">
-          <MenuButton aria-label="Theme switcher">
+          <MenuButton aria-label={dictionary.common.themeSwitcher}>
             {mounted ? resolvedTheme === 'dark' ? <Moon /> : <Sun /> : <Blank />}
           </MenuButton>
         </div>
@@ -90,7 +95,7 @@ const ThemeSwitch = () => {
                         <div className="mr-2">
                           <Sun />
                         </div>
-                        Light
+                        {dictionary.common.light}
                       </button>
                     )}
                   </MenuItem>
@@ -106,7 +111,7 @@ const ThemeSwitch = () => {
                         <div className="mr-2">
                           <Moon />
                         </div>
-                        Dark
+                        {dictionary.common.dark}
                       </button>
                     )}
                   </MenuItem>
@@ -122,7 +127,7 @@ const ThemeSwitch = () => {
                         <div className="mr-2">
                           <Monitor />
                         </div>
-                        System
+                        {dictionary.common.system}
                       </button>
                     )}
                   </MenuItem>
