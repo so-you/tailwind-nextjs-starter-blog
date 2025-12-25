@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 130" role="img" aria-label="一人公司跨境电商AI增长黑客横幅Logo">
+  <title>跨境AI一人公司 - 核心关键词组合</title>
+  <defs>
+    <style>
+      /* --- 颜色定义 --- */
+      :root {
+        --text-primary: #333333;   /* 深色主文字 */
+        --text-secondary: #666666; /* 浅色次要文字 */
+        --accent-color: #0056D2;   /* 科技蓝强调色 */
+        --divider-color: #dddddd;  /* 分隔符颜色 */
+        --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      /* 深色模式适配 */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text-primary: #f0f0f0;
+          --text-secondary: #aaaaaa;
+          --accent-color: #4D9EFF;
+          --divider-color: #444444;
+        }
+      }
+
+      /* --- 通用样式 --- */
+      text { font-family: var(--font-stack); }
+      .graphic-icon { fill: url(#grad1); }
+      .icon-dot { fill: var(--accent-color); }
+      .txt-accent { fill: var(--accent-color); }
+      .txt-divider { fill: var(--divider-color); font-weight: 300; }
+
+      /* --- 严格定义的两种字体样式 (保持不变) --- */
+      
+      /* 样式A：原第一行的大号字体 (28px Bold) */
+      .style-large {
+        font-size: 28px;
+        font-weight: 700;
+        fill: var(--text-primary);
+      }
+      
+      /* 样式B：原第二行的中号字体 (22px Medium) */
+      .style-medium {
+        font-size: 22px;
+        font-weight: 500;
+        fill: var(--text-secondary);
+        letter-spacing: 0.3px;
+      }
+
+    </style>
+    <!-- 图标渐变定义 -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:var(--accent-color);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:var(--accent-color);stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- 左侧图形区域 (保持不变) -->
+  <g transform="translate(20, 20)">
+    <path class="graphic-icon" d="M10,50 C10,50 30,45 40,30 C50,15 70,10 85,20 C95,27 105,25 115,15 L130,5 L130,25 C120,35 100,40 85,30 C70,20 50,25 40,40 C30,55 10,60 10,60 Z" opacity="0.8"/>
+    <path class="graphic-icon" d="M130,5 L145,5 L130,20 Z" />
+    <circle class="icon-dot" cx="40" cy="40" r="6"/>
+    <circle class="icon-dot" cx="85" cy="20" r="8"/>
+    <circle class="icon-dot" cx="130" cy="15" r="5"/>
+  </g>
+
+  <!-- 右侧文本区域 (重新排序，保持各自大小) -->
+  <g transform="translate(180, 0)">
+    
+    <!-- 第一行：混合了中号和大号字体 -->
+    <!-- 使用 dominant-baseline="alphabetic" 确保不同大小文字底部对齐 -->
+    <text x="0" y="52" dominant-baseline="alphabetic">
+      <!-- 移到开头的词 (保持中号 Style B) -->
+      <tspan class="style-medium">跨境电商</tspan>
+      <tspan class="txt-divider" dx="8" style="font-size:22px">|</tspan>
+      <tspan class="style-medium" dx="8">AI 产品</tspan>
+      
+      <!-- 分隔符 (加大间距) -->
+      <tspan class="txt-divider" dx="20" style="font-size:28px">|</tspan>
+      
+      <!-- 核心公式 (保持大号 Style A) -->
+      <tspan class="style-large" dx="20">
+        <tspan class="txt-accent">AI</tspan> X 个人系统 = <tspan class="txt-accent">n 倍</tspan>工程师
+      </tspan>
+    </text>
+
+    <!-- 第二行：混合了大号和中号字体 -->
+    <text x="0" y="98" dominant-baseline="alphabetic">
+      <!-- 移到第二行的词 (保持大号 Style A) -->
+      <tspan class="style-large">一人公司 <tspan class="txt-accent">OPC</tspan></tspan>
+      
+      <!-- 分隔符 -->
+      <tspan class="txt-divider" dx="15" style="font-size:28px">|</tspan>
+
+      <!-- 其余关键词 (保持中号 Style B) -->
+      <!-- 由于前面是大号字，这里的小号字需要微调 dy 以便视觉居中对齐，或者直接底部对齐 -->
+      <tspan class="style-medium" dx="15">
+        <tspan class="txt-accent" style="font-weight:600">增长黑客</tspan> <tspan class="txt-divider" dx="8">|</tspan>
+        <tspan dx="8">从 0 赚 <tspan class="txt-accent" style="font-weight:600">100 万</tspan></tspan> <tspan class="txt-divider" dx="8">|</tspan>
+        <tspan dx="8">四十不惑</tspan> <tspan class="txt-divider" dx="8">|</tspan>
+        <tspan dx="8">人生梦想checklist</tspan>
+      </tspan>
+    </text>
+  </g>
+</svg>
