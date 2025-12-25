@@ -7,7 +7,7 @@ const BannerLogo = () => {
       viewBox="0 0 1000 130"
       role="img"
       aria-label="一人公司跨境电商AI增长黑客横幅Logo"
-      className="w-full h-auto"
+      className="h-auto w-full"
     >
       <title>跨境AI一人公司 - 核心关键词组合</title>
       <defs>
@@ -38,66 +38,55 @@ const BannerLogo = () => {
 
       <g transform="translate(180, 0)" className="banner-font">
         <text x="0" y="52" dominantBaseline="alphabetic">
-          <tspan
-            className="text-[22px] font-medium fill-[#666666] dark:fill-[#aaaaaa] tracking-[0.3px]"
-          >
+          <tspan className="fill-[#666666] text-[22px] font-medium tracking-[0.3px] dark:fill-[#aaaaaa]">
             跨境电商
           </tspan>
-          <tspan
-            className="fill-[#dddddd] dark:fill-[#444444] font-light text-[22px]"
-            dx="8"
-          >
+          <tspan className="fill-[#dddddd] text-[22px] font-light dark:fill-[#444444]" dx="8">
             |
           </tspan>
           <tspan
-            className="text-[22px] font-medium fill-[#666666] dark:fill-[#aaaaaa] tracking-[0.3px]"
+            className="fill-[#666666] text-[22px] font-medium tracking-[0.3px] dark:fill-[#aaaaaa]"
             dx="8"
           >
             AI 产品
           </tspan>
 
-          <tspan
-            className="fill-[#dddddd] dark:fill-[#444444] font-light text-[28px]"
-            dx="20"
-          >
+          <tspan className="fill-[#dddddd] text-[28px] font-light dark:fill-[#444444]" dx="20">
             |
           </tspan>
 
-          <tspan
-            className="text-[28px] font-bold fill-[#333333] dark:fill-[#f0f0f0]"
-            dx="20"
-          >
+          <tspan className="fill-[#333333] text-[28px] font-bold dark:fill-[#f0f0f0]" dx="20">
             <tspan className="fill-[#0056D2] dark:fill-[#4D9EFF]">AI</tspan> X 个人系统 ={' '}
             <tspan className="fill-[#0056D2] dark:fill-[#4D9EFF]">n 倍</tspan>工程师
           </tspan>
         </text>
 
         <text x="0" y="98" dominantBaseline="alphabetic">
-          <tspan className="text-[28px] font-bold fill-[#333333] dark:fill-[#f0f0f0]">
+          <tspan className="fill-[#333333] text-[28px] font-bold dark:fill-[#f0f0f0]">
             一人公司 <tspan className="fill-[#0056D2] dark:fill-[#4D9EFF]">OPC</tspan>
           </tspan>
 
-          <tspan
-            className="fill-[#dddddd] dark:fill-[#444444] font-light text-[28px]"
-            dx="15"
-          >
+          <tspan className="fill-[#dddddd] text-[28px] font-light dark:fill-[#444444]" dx="15">
             |
           </tspan>
 
-          <tspan className="text-[22px] font-medium fill-[#666666] dark:fill-[#aaaaaa] tracking-[0.3px]" dx="15">
-            <tspan className="fill-[#0056D2] dark:fill-[#4D9EFF] font-semibold">增长黑客</tspan>{' '}
-            <tspan className="fill-[#dddddd] dark:fill-[#444444] font-light" dx="8">
+          <tspan
+            className="fill-[#666666] text-[22px] font-medium tracking-[0.3px] dark:fill-[#aaaaaa]"
+            dx="15"
+          >
+            <tspan className="fill-[#0056D2] font-semibold dark:fill-[#4D9EFF]">增长黑客</tspan>{' '}
+            <tspan className="fill-[#dddddd] font-light dark:fill-[#444444]" dx="8">
               |
             </tspan>
             <tspan dx="8">
               从 0 赚{' '}
-              <tspan className="fill-[#0056D2] dark:fill-[#4D9EFF] font-semibold">100 万</tspan>
+              <tspan className="fill-[#0056D2] font-semibold dark:fill-[#4D9EFF]">100 万</tspan>
             </tspan>{' '}
-            <tspan className="fill-[#dddddd] dark:fill-[#444444] font-light" dx="8">
+            <tspan className="fill-[#dddddd] font-light dark:fill-[#444444]" dx="8">
               |
             </tspan>
             <tspan dx="8">四十不惑</tspan>{' '}
-            <tspan className="fill-[#dddddd] dark:fill-[#444444] font-light" dx="8">
+            <tspan className="fill-[#dddddd] font-light dark:fill-[#444444]" dx="8">
               |
             </tspan>
             <tspan dx="8">人生梦想checklist</tspan>
